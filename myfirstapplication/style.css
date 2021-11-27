@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Genos:wght@300&display=swap');
+
+body {
+  margin: 100px auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: linear-gradient(90deg, grey, white, rgb(204, 204, 255));
+}
+
+main {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /*justify-content: space-between;
+  align-content: stretch;*/
+}
+
+#picture {
+  width: 100%;
+  /*height: 80%;*/
+  flex-basis: 80%;
+  box-shadow: 0px 5px 7px 2px grey;
+  flex-grow: 4;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+.side {
+  background-color: honeydew;
+  display: flex;
+  align-items: center;
+  
+}
+
+#leftArrow, #rightArrow {
+  background-size: 100% 100%;
+  height: 40px;
+  width: 100px;
+  color: transparent;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+#leftArrow {
+  background-image: url(./images/arrow.svg);
+}
+
+#rightArrow {
+  background-image: url(./images/arrow.svg);
+  transform: rotate(180deg);
+}
+
+button:active {
+  opacity: 50%;
+}
+
+#container {
+  position: relative;
+  background-color: transparent;
+  color: transparent;
+}
+
+#photo {
+  width: 100%;
+  height: auto;
+  margin-bottom: -4px;
+}
+
+#blackContainer {
+  width: 100%;
+  height: 145px;
+  position: absolute;
+  bottom: 0;
+  background-color: black;
+  opacity: 50%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 25px;
+  font-family: 'Genos', sans-serif;
+}
+
+#photoDescription, #photoTitle {
+  margin: 15px 7px 7px 10px;
+}
+
+
+#thumbsContainer {
+  width: 100%;
+  height: 20%;
+  flex-basis: 20%;
+  flex-grow: 1;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  
+}
+
+.thumb {
+  width: 60px;
+  height: 60px;
+  margin: 6px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: solid white 4px;
+  border-radius: 4px;
+  box-shadow: rgb(50, 50, 50) 0 0 4px 0;
+  cursor: pointer;
+  caret-color: transparent;
+  position: relative;
+}
+
+.thumbActive {
+  width: 65px;
+  height: 65px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: solid white;
+  border-radius: 3px;
+  box-shadow: rgb(30, 30, 30) 0 5px 8px 0px;
+  cursor: pointer;
+  caret-color: transparent;
+  position: relative;
+}
+
+
+.tooltip {
+  
+  display: none;
+  position: relative;
+  bottom: -70px;
+  left: -15px;
+  background-color: black;
+  opacity: 90%;
+  width: 90px;
+  height: 35px;
+  text-align: center;
+  padding-top: 10px;
+  margin-top: 7px;
+  border-radius: 3px;
+  color: white;
+  font-size: small;
+ 
+}
+
+
+.thumb:hover .tooltip {
+  display: block;
+}
